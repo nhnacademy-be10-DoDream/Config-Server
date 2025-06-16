@@ -1,2 +1,34 @@
 server:
-  port: 10332
+  port: ${PORT:10332}
+
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/nhnacademy-be10-DoDream/Config-Server.git
+          default-label: main
+          username: leejuheon
+          password: ${CONFIG_TOKEN}
+  application:
+    name: config
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:10322/eureka/
+    healthcheck:
+      enabled: true
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${server.port}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,shutdown
+
+logging:
+  level:
+    org.springframework.cloud.gateway: DEBUG
