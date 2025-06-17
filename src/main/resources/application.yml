@@ -6,7 +6,7 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/nhnacademy-be10-DoDream/Config-Server.git
+          uri: https://github.com/nhnacademy-be10-DoDream/Config-Repo.git
           default-label: main
           username: leejuheon
           password: ${CONFIG_TOKEN}
@@ -28,6 +28,9 @@ management:
     web:
       exposure:
         include: health,info,shutdown
+  endpoint:
+    health:
+      show-details: always
 
 logging:
   level:
