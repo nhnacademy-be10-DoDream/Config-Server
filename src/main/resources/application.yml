@@ -1,5 +1,5 @@
 server:
-  port: ${PORT:10332}
+  port: 10332
 
 spring:
   cloud:
@@ -10,7 +10,6 @@ spring:
           default-label: main
           username: leejuheon
           password: ${CONFIG_TOKEN}
-          refresh-rate: 0
   application:
     name: config
 

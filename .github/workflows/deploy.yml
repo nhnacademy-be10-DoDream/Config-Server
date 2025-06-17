@@ -38,6 +38,5 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           port: ${{ secrets.SSH_PORT }}
           script: |
-            export CONFIG_TOKEN=${{ secrets.CONFIG_TOKEN }}
             chmod +x ~/configstartup.sh
-            ~/configstartup.sh
+            ~/configstartup.sh ${{ secrets.CONFIG_TOKEN }}
