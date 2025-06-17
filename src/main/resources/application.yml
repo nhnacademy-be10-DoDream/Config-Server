@@ -10,6 +10,7 @@ spring:
           default-label: main
           username: leejuheon
           password: ${CONFIG_TOKEN}
+          refresh-rate: 0
   application:
     name: config
 
