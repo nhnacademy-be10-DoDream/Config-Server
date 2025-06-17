@@ -8,7 +8,7 @@ spring:
         git:
           uri: https://github.com/nhnacademy-be10-DoDream/Config-Server.git
           default-label: main
-          username: LeeJuheonT6138
+          username: leejuheon
           password: ${CONFIG_TOKEN}
   application:
     name: config
